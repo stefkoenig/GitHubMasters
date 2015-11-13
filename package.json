@@ -1,0 +1,19 @@
+{
+  "name": "githubmasters",
+  "version": "1.0.0",
+  "description": "team awesome",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teddy310/GitHubMasters.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teddy310/GitHubMasters/issues"
+  },
+  "homepage": "https://github.com/teddy310/GitHubMasters#readme"
+}
