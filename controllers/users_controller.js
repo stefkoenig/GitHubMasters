@@ -17,13 +17,6 @@ function show(req,res){
 	})
 }
 
-//update a single user
-// function edit(req,res){
-// 	User.update({_id: req.params._id}, {$set: {user_name:"cdawg da god"}}, function(err,user){
-// 		if(err) console.log(err)
-// 		res.json(user)
-// 	})
-// }
 //method to create a user
 function create(req,res){
 	console.log('Creating a user')
@@ -55,23 +48,16 @@ function update(req, res){
 
 		user.save(function(err){
 			if(err) res.send(err)
-			res.json({success: true, message: "you have been updated!"})
+			res.json({success: true, message: 'you have been updated!'})
 		})
 	})
 }
 
-//delete a single user
-// function destroy(req,res){
-// 	User.remove({_id: req.params._id}, function(err,user){
-// 		if(err) console.log(err)
-// 		res.json(user)
-// 	})
-// }
 function destroy(req, res){
 	// delete a single user -- destroy
 	User.findOneAndRemove({_id: req.params.user_id}, function(err, user){
 		if(err) res.send(err)
-		res.json({success: true, message: "User: " + user.user_name + " deleted!"})
+		res.json({success: true, message: 'User: ' + user.user_name + ' deleted!'})
 	})
 }
 
