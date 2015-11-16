@@ -22,8 +22,8 @@ function create(req,res){
 	console.log('Creating a user')
 	var user = new User(req.body.user)
 
-	// user.user_name = req.body.username
-	// user.email = req.body.email
+	user.user_name = req.body.username
+	user.email = req.body.email
 
 	user.save(function(err){
 		if(err){
