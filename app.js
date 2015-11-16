@@ -3,9 +3,14 @@ var express = require('express')
 ,	 	logger	= require('morgan')
 ,bodyParser = require('body-parser')
 , mongoose	= require('mongoose')
+, ejs       = require('ejs')
+, ejsLayouts= require('express-ejs-layouts')
+
+//app configuration
+app.set('view engine', 'ejs')
 
 //establishes connection to MongoDB
-mongoose.connect('mongodb://colino:banana1@ds053774.mongolab.com:53774/colino') //location of db
+mongoose.connect('mongodb://localhost/') //location of db
 
 //track requests made to the app
 app.use(logger('dev')) //middleware software that runs before other software. in this instance we want to log data on the user before they visit the page.

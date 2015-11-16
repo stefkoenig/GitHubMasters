@@ -13,6 +13,7 @@ function index(req,res){
 function show(req,res){
 	User.findById(req.params.user_id, function(err,user){
 		if(err) console.log(err)
+		console.log(user_name)
 		res.json(user)
 	})
 }
@@ -22,8 +23,9 @@ function create(req,res){
 	console.log('Creating a user')
 	var user = new User(req.body.user)
 
-	// user.user_name = req.body.username
-	// user.email = req.body.email
+	user.user_name = req.body.user_name
+	user.email = req.body.email
+	user.age = req.body.age
 
 	user.save(function(err){
 		if(err){
@@ -42,9 +44,9 @@ function update(req, res){
 	User.findById(req.params.user_id, function(err, user){
 		if(err) res.send(err)
 
-		if(req.body.user.user_name) user.user_name = req.body.user.user_name
-		if(req.body.user.email) user.email = req.body.user.email
-		if(req.body.user.age) user.age = req.body.user.age
+		if(req.body.user_name) user.user_name = req.body.user_name
+		if(req.body.email) user.email = req.body.email
+		if(req.body.age) user.age = req.body.age
 
 		user.save(function(err){
 			if(err) res.send(err)

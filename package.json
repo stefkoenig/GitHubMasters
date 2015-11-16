@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/teddy310/GitHubMasters/issues"
   },
-  "homepage": "https://github.com/teddy310/GitHubMasters#readme"
+  "homepage": "https://github.com/teddy310/GitHubMasters#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "express-ejs-layouts": "^2.0.0",
+    "mongoose": "^4.2.6",
+    "morgan": "^1.6.1"
+  }
 }

@@ -1,8 +1,8 @@
 var mongoose = require('mongoose')
 
 var userSchema = new mongoose.Schema({
-  user_name: String
-  ,email: {type: String, required: true, unique: true}
+   user_name: String
+  ,email: String
   ,friends: []
   ,age: Number
 })
